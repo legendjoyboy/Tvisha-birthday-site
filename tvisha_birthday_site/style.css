@@ -1,0 +1,176 @@
+/* Basic styles for the birthday site */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url('images/intro_bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-box {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 90%;
+}
+
+h1 {
+  color: #e91e63;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #e91e63;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #c2185b;
+}
+
+/* Gallery styles */
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.gallery-grid figure {
+  margin: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.gallery-grid figure:hover {
+  transform: scale(1.05);
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-grid figcaption {
+  padding: 1rem;
+  background: white;
+  font-style: italic;
+  color: #555;
+}
+
+.button-center {
+  margin-top: 2rem;
+}
+
+/* Surprise styles */
+.surprise-box {
+  max-width: 800px;
+  width: 95%;
+}
+
+.special-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #e91e63;
+  margin-bottom: 1rem;
+}
+
+.quote-section p {
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.love-message {
+  color: #e91e63;
+  font-size: 1.8rem;
+  margin: 2rem 0;
+}
+
+.footer-text {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.creator {
+  font-weight: bold;
+}
+
+.creator-name {
+  font-style: italic;
+}
+
+.note {
+  margin-top: 1rem;
+}
+
+.back-link {
+  margin-top: 2rem;
+}
+
+.floating-heart {
+  position: absolute;
+  font-size: 2rem;
+  animation: float 2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .center-box {
+    padding: 1.5rem;
+  }
+}

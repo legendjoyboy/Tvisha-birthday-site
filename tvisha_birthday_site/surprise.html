@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Surprise for You</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="surprise">
+  <div class="center-box surprise-box">
+    <img src="images/tvisha.jpg" alt="TVISHA" class="special-img">
+    <h1>Happy Birthday, TVISHA ❤️</h1>
+    
+    <div class="quote-section">
+      <p class="first-quote">"This is the picture of the lady, the soul I fell very first for. Your first trust and faith in me changed everything. You are my beginning, my everything." ❤️❤️❤️</p>
+      
+      <p class="romantic-quote">"You are the love of my life, my best friend, and my forever. Every moment with you is a blessing I never knew I needed." ❤️❤️❤️</p>
+      
+      <p class="romantic-quote">"In your eyes, I found my home. In your heart, I found my peace. In your love, I found my purpose." ❤️❤️❤️</p>
+      
+      <p class="romantic-quote">"This website is just a small way to show how much you mean to me. You deserve the world, and I'll spend my life giving you that and more." ❤️❤️❤️</p>
+    </div>
+    
+    <h2 class="love-message">I Love You ❤️ uuuuuuuuuu ❤️</h2>
+    
+    <div class="footer-text">
+      <p class="creator">Writer | Designer | Creator</p>
+      <p class="creator-name">~ Deep Singh</p>
+      
+      <p class="note">I have been working on this since I bought the laptop. I hope you loved it! 🎁</p>
+    </div>
+    
+    <div class="back-link">
+      <a href="index.html" class="btn">Start Over</a>
+    </div>
+  </div>
+
+  <script>
+    // Create heart element
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.innerHTML = '❤️';
+      heart.className = 'floating-heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.top = Math.random() * 100 + 'vh';
+      document.body.appendChild(heart);
+
+      // Remove heart after animation completes
+      setTimeout(() => {
+        heart.remove();
+      }, 2000);
+    }
+
+    // Create hearts automatically every 2 seconds
+    setInterval(createHeart, 2000);
+
+    // Create hearts on click
+    document.addEventListener('click', (e) => {
+      // Don't create hearts if clicking on buttons
+      if (e.target.classList.contains('btn')) return;
+      
+      for (let i = 0; i < 3; i++) {
+        setTimeout(() => {
+          createHeart();
+        }, i * 100);
+      }
+    });
+  </script>
+  <!-- Background music starts as soon as this page loads -->
+  <audio autoplay loop>
+    <source src="music/bargad.mp3.mpeg" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</body>
+</html>
